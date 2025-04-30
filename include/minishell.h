@@ -6,7 +6,7 @@
 /*   By: Evan <Evan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 16:56:35 by Evan              #+#    #+#             */
-/*   Updated: 2025/04/30 15:41:58 by Evan             ###   ########.fr       */
+/*   Updated: 2025/04/30 17:11:02 by Evan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -209,6 +209,7 @@ int								ft_handle_escape(t_hv *hv);
 void							ft_add_history(char *line, t_hist **tail);
 void							ft_history_up(t_hv *hv);
 void							ft_history_down(t_hv *hv);
+size_t							visible_len(const char *s);
 
 // Gestion readline : reset spécial (ctrl-d, ctrl-c)
 char							*ft_sigint_reset(const struct termios *orig,

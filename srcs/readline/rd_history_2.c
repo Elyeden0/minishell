@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rl_history_2.c                                     :+:      :+:    :+:   */
+/*   rd_history_2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Evan <Evan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 22:26:31 by Evan              #+#    #+#             */
-/*   Updated: 2025/04/28 22:32:07 by Evan             ###   ########.fr       */
+/*   Updated: 2025/04/30 17:10:15 by Evan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 static void	ft_clear_prompt_area(const char *prompt, const char *buf)
 {
-	size_t	len;
+	size_t	total;
 	size_t	i;
 
-	len = ft_strlen(prompt) + ft_strlen(buf);
+	total = visible_len(prompt) + strlen(buf);
 	i = 0;
-	while (i < len)
+	while (i < total)
 	{
 		write(1, "\x1b[D", 3);
 		i++;
