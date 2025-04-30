@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abonnard <abonnard@student.42nice.fr>      +#+  +:+       +#+        */
+/*   By: Evan <Evan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 16:56:35 by Evan              #+#    #+#             */
-/*   Updated: 2025/04/30 13:53:16 by abonnard         ###   ########.fr       */
+/*   Updated: 2025/04/30 15:41:58 by Evan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -286,6 +286,8 @@ void							print_export(t_env *env);
 t_env							*create_node_env(char *envp);
 t_env							*find_env(t_env *env, const char *name);
 void							check_path_pwd_env(t_env *env);
+t_env							*create_custom_node(char *name, char *params,
+									int show);
 char							*copy_string(char *src);
 void							copy_to_buffer(char *dest, char *src,
 									int *index);

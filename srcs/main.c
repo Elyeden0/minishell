@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abonnard <abonnard@student.42nice.fr>      +#+  +:+       +#+        */
+/*   By: Evan <Evan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 20:11:11 by Evan              #+#    #+#             */
-/*   Updated: 2025/04/30 13:53:32 by abonnard         ###   ########.fr       */
+/*   Updated: 2025/04/30 15:39:23 by Evan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ t_env	*init_env(t_env *env, char **envp)
 {
 	t_env	*tmp;
 	t_env	*node;
+	char	cwd[4096];
 
 	tmp = NULL;
 	while (envp && *envp)
@@ -34,6 +35,12 @@ t_env	*init_env(t_env *env, char **envp)
 			tmp->next = node;
 		tmp = node;
 		envp++;
+	}
+	if (!env)
+	{
+		getcwd(cwd, sizeof(cwd));
+		env = create_custom_node("PWD=", cwd, 1);
+		tmp = env;
 	}
 	check_path_pwd_env(env);
 	return (env);
@@ -53,9 +60,9 @@ char	*ft_get_prompt(t_env *env)
 	if (!pwd)
 		pwd = ft_strdup("");
 	temp = ft_strjoin(BOLD_GREEN, user);
-	user = ft_strjoin(temp, RESET_COLOR":"BOLD_BLUE);
+	user = ft_strjoin(temp, RESET_COLOR ":" BOLD_BLUE);
 	temp = ft_strjoin(user, pwd);
-	prompt = ft_strjoin(temp, BOLD_YELLOW"$ "RESET_COLOR);
+	prompt = ft_strjoin(temp, BOLD_YELLOW "$ " RESET_COLOR);
 	return (prompt);
 }
 
