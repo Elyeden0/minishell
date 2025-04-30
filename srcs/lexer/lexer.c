@@ -6,7 +6,7 @@
 /*   By: Evan <Evan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 00:43:40 by Evan              #+#    #+#             */
-/*   Updated: 2025/04/29 14:14:43 by Evan             ###   ########.fr       */
+/*   Updated: 2025/04/30 15:33:45 by Evan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	handle_quote(t_lexer *lx, char *buf, size_t *i, char quote)
 {
 	char	c;
 
+	buf[*i] = quote;
+	(*i)++;
 	lx->pos++;
 	c = lexer_peek(lx);
 	while (c && c != quote)
@@ -26,7 +28,11 @@ void	handle_quote(t_lexer *lx, char *buf, size_t *i, char quote)
 		c = lexer_peek(lx);
 	}
 	if (lexer_peek(lx) == quote)
+	{
+		buf[*i] = quote;
+		(*i)++;
 		lx->pos++;
+	}
 }
 
 t_lexer	*lexer_init(char *line)
