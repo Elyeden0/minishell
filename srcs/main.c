@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Evan <Evan@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: abonnard <abonnard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 20:11:11 by Evan              #+#    #+#             */
-/*   Updated: 2025/04/30 02:42:07 by Evan             ###   ########.fr       */
+/*   Updated: 2025/04/30 13:53:32 by abonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,26 @@ t_env	*init_env(t_env *env, char **envp)
 	return (env);
 }
 
+char	*ft_get_prompt(t_env *env)
+{
+	char	*prompt;
+	char	*pwd;
+	char	*user;
+	char	*temp;
+
+	user = get_env_value(env, "USER");
+	if (!user)
+		user = ft_strdup("");
+	pwd = get_env_value(env, "PWD");
+	if (!pwd)
+		pwd = ft_strdup("");
+	temp = ft_strjoin(BOLD_GREEN, user);
+	user = ft_strjoin(temp, RESET_COLOR":"BOLD_BLUE);
+	temp = ft_strjoin(user, pwd);
+	prompt = ft_strjoin(temp, BOLD_YELLOW"$ "RESET_COLOR);
+	return (prompt);
+}
+
 void	minishell(t_env *env)
 {
 	char	*input;
@@ -49,7 +69,7 @@ void	minishell(t_env *env)
 	last_status = 0;
 	while (1)
 	{
-		input = ft_readline("[minishell] $> ");
+		input = ft_readline(ft_get_prompt(env));
 		if (!input)
 		{
 			printf("exit\n");

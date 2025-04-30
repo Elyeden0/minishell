@@ -6,7 +6,7 @@
 /*   By: abonnard <abonnard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 16:56:35 by Evan              #+#    #+#             */
-/*   Updated: 2025/04/30 10:36:57 by abonnard         ###   ########.fr       */
+/*   Updated: 2025/04/30 13:53:16 by abonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,11 @@
 # include <termios.h>
 # include <unistd.h>
 
+# define BOLD_GREEN "\001\033[1;32m\002"
+# define BOLD_BLUE "\001\033[1;34m\002"
+# define BOLD_YELLOW "\001\033[1;33m\002"
+# define RESET_COLOR "\001\033[0m\002"
+
 // environnement
 typedef struct s_env
 {
@@ -52,7 +57,6 @@ typedef struct s_hist
 
 // gestion de readline
 typedef struct s_v
-
 {
 	char						*buf;
 	char						c;
@@ -123,7 +127,7 @@ typedef struct s_paren_ctx
 	int							*stack;
 	int							top;
 }								t_paren_ctx;
-#include "minishell.h"
+
 // ============================== EXPANSION ================================ //
 
 typedef struct s_expander

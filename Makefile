@@ -3,7 +3,7 @@ SHELL = /bin/bash
 
 # Compiler and flags
 CC       = clang
-CFLAGS   = -Wall -Wextra -Werror
+CFLAGS   = -Wall -Wextra -Werror -fsanitize=address -g3
 
 
 # Colors for messages

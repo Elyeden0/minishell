@@ -6,13 +6,12 @@
 /*   By: abonnard <abonnard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 02:39:48 by Evan              #+#    #+#             */
-/*   Updated: 2025/04/30 12:44:27 by abonnard         ###   ########.fr       */
+/*   Updated: 2025/04/30 13:53:36 by abonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../lib/LibFT/libft.h"
 #include "../../include/minishell.h"
-
 
 int	builtin_env(t_env *env, char **args)
 {
