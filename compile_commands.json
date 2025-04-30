@@ -1,0 +1,1212 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/main.o",
+      "srcs/main.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/main.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/extender/expand.o",
+      "srcs/extender/expand.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/extender/expand.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/extender/expand.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/extender/expand_utils.o",
+      "srcs/extender/expand_utils.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/extender/expand_utils.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/extender/expand_utils.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/extender/expand_wildcard.o",
+      "srcs/extender/expand_wildcard.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/extender/expand_wildcard.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/extender/expand_wildcard.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/extender/expand_wildcard_utils.o",
+      "srcs/extender/expand_wildcard_utils.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/extender/expand_wildcard_utils.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/extender/expand_wildcard_utils.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/extender/init_env.o",
+      "srcs/extender/init_env.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/extender/init_env.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/extender/init_env.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/extender/init_env_utils.o",
+      "srcs/extender/init_env_utils.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/extender/init_env_utils.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/extender/init_env_utils.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/builtins/b_cd.o",
+      "srcs/builtins/b_cd.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/builtins/b_cd.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/builtins/b_cd.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/builtins/b_cd2.o",
+      "srcs/builtins/b_cd2.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/builtins/b_cd2.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/builtins/b_cd2.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/builtins/b_echo.o",
+      "srcs/builtins/b_echo.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/builtins/b_echo.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/builtins/b_echo.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/builtins/b_env.o",
+      "srcs/builtins/b_env.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/builtins/b_env.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/builtins/b_env.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/builtins/b_exit.o",
+      "srcs/builtins/b_exit.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/builtins/b_exit.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/builtins/b_exit.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/builtins/b_export.o",
+      "srcs/builtins/b_export.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/builtins/b_export.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/builtins/b_export.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/builtins/b_export_utils.o",
+      "srcs/builtins/b_export_utils.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/builtins/b_export_utils.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/builtins/b_export_utils.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/builtins/b_pwd.o",
+      "srcs/builtins/b_pwd.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/builtins/b_pwd.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/builtins/b_pwd.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/lexer/lexer.o",
+      "srcs/lexer/lexer.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/lexer/lexer.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/lexer/lexer.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/lexer/lexer_utils.o",
+      "srcs/lexer/lexer_utils.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/lexer/lexer_utils.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/lexer/lexer_utils.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/lexer/lexer_handler.o",
+      "srcs/lexer/lexer_handler.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/lexer/lexer_handler.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/lexer/lexer_handler.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/lexer/lexer_handler_utils.o",
+      "srcs/lexer/lexer_handler_utils.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/lexer/lexer_handler_utils.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/lexer/lexer_handler_utils.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/parser/input_check_paren.o",
+      "srcs/parser/input_check_paren.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/parser/input_check_paren.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/parser/input_check_paren.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/parser/input_error_parser.o",
+      "srcs/parser/input_error_parser.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/parser/input_error_parser.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/parser/input_error_parser.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/parser/input_error_tokenizer.o",
+      "srcs/parser/input_error_tokenizer.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/parser/input_error_tokenizer.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/parser/input_error_tokenizer.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/parser/input_error_utils.o",
+      "srcs/parser/input_error_utils.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/parser/input_error_utils.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/parser/input_error_utils.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/parser/input_error.o",
+      "srcs/parser/input_error.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/parser/input_error.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/parser/input_error.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/execution/exec_builtin.o",
+      "srcs/execution/exec_builtin.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/execution/exec_builtin.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/execution/exec_builtin.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/execution/exec_cmds.o",
+      "srcs/execution/exec_cmds.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/execution/exec_cmds.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/execution/exec_cmds.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/execution/exec_heredoc.o",
+      "srcs/execution/exec_heredoc.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/execution/exec_heredoc.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/execution/exec_heredoc.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/execution/exec_pipe.o",
+      "srcs/execution/exec_pipe.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/execution/exec_pipe.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/execution/exec_pipe.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/execution/exec_redirect.o",
+      "srcs/execution/exec_redirect.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/execution/exec_redirect.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/execution/exec_redirect.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/execution/exec.o",
+      "srcs/execution/exec.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/execution/exec.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/execution/exec.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/readline/rd_edit.o",
+      "srcs/readline/rd_edit.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/readline/rd_edit.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/readline/rd_edit.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/readline/rd_history.o",
+      "srcs/readline/rd_history.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/readline/rd_history.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/readline/rd_history.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/readline/rd_history_2.o",
+      "srcs/readline/rd_history_2.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/readline/rd_history_2.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/readline/rd_history_2.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/readline/rd_readline.o",
+      "srcs/readline/rd_readline.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/readline/rd_readline.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/readline/rd_readline.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/readline/rd_reset.o",
+      "srcs/readline/rd_reset.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/readline/rd_reset.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/readline/rd_reset.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/readline/rd_signal.o",
+      "srcs/readline/rd_signal.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/readline/rd_signal.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/readline/rd_signal.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/readline/rd_term.o",
+      "srcs/readline/rd_term.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/readline/rd_term.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/readline/rd_term.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/ast/ast_builders.o",
+      "srcs/ast/ast_builders.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/ast/ast_builders.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/ast/ast_builders.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/ast/ast_parser_utils.o",
+      "srcs/ast/ast_parser_utils.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/ast/ast_parser_utils.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/ast/ast_parser_utils.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address",
+      "-g3",
+      "-Iinclude",
+      "-Ilib/LibFT",
+      "-Ilib/LibMalloc",
+      "-Ilib/LibLst",
+      "-Ilib/LibPrintf",
+      "-c",
+      "-o",
+      "objs/ast/ast_parser.o",
+      "srcs/ast/ast_parser.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2",
+    "file": "/home/Evan/Documents/REPO/m2/srcs/ast/ast_parser.c",
+    "output": "/home/Evan/Documents/REPO/m2/objs/ast/ast_parser.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "ft_malloc.o",
+      "ft_malloc.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2/lib/LibMalloc",
+    "file": "/home/Evan/Documents/REPO/m2/lib/LibMalloc/ft_malloc.c",
+    "output": "/home/Evan/Documents/REPO/m2/lib/LibMalloc/ft_malloc.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "ft_free.o",
+      "ft_free.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2/lib/LibMalloc",
+    "file": "/home/Evan/Documents/REPO/m2/lib/LibMalloc/ft_free.c",
+    "output": "/home/Evan/Documents/REPO/m2/lib/LibMalloc/ft_free.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "ft_realloc.o",
+      "ft_realloc.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2/lib/LibMalloc",
+    "file": "/home/Evan/Documents/REPO/m2/lib/LibMalloc/ft_realloc.c",
+    "output": "/home/Evan/Documents/REPO/m2/lib/LibMalloc/ft_realloc.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "utils.o",
+      "utils.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2/lib/LibMalloc",
+    "file": "/home/Evan/Documents/REPO/m2/lib/LibMalloc/utils.c",
+    "output": "/home/Evan/Documents/REPO/m2/lib/LibMalloc/utils.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "ft_strlen.o",
+      "ft_strlen.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2/lib/LibFT",
+    "file": "/home/Evan/Documents/REPO/m2/lib/LibFT/ft_strlen.c",
+    "output": "/home/Evan/Documents/REPO/m2/lib/LibFT/ft_strlen.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "ft_strncmp.o",
+      "ft_strncmp.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2/lib/LibFT",
+    "file": "/home/Evan/Documents/REPO/m2/lib/LibFT/ft_strncmp.c",
+    "output": "/home/Evan/Documents/REPO/m2/lib/LibFT/ft_strncmp.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "ft_atoi.o",
+      "ft_atoi.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2/lib/LibFT",
+    "file": "/home/Evan/Documents/REPO/m2/lib/LibFT/ft_atoi.c",
+    "output": "/home/Evan/Documents/REPO/m2/lib/LibFT/ft_atoi.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "ft_strdup.o",
+      "ft_strdup.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2/lib/LibFT",
+    "file": "/home/Evan/Documents/REPO/m2/lib/LibFT/ft_strdup.c",
+    "output": "/home/Evan/Documents/REPO/m2/lib/LibFT/ft_strdup.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "ft_strtrim.o",
+      "ft_strtrim.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2/lib/LibFT",
+    "file": "/home/Evan/Documents/REPO/m2/lib/LibFT/ft_strtrim.c",
+    "output": "/home/Evan/Documents/REPO/m2/lib/LibFT/ft_strtrim.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "ft_itoa.o",
+      "ft_itoa.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2/lib/LibFT",
+    "file": "/home/Evan/Documents/REPO/m2/lib/LibFT/ft_itoa.c",
+    "output": "/home/Evan/Documents/REPO/m2/lib/LibFT/ft_itoa.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "ft_split.o",
+      "ft_split.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2/lib/LibFT",
+    "file": "/home/Evan/Documents/REPO/m2/lib/LibFT/ft_split.c",
+    "output": "/home/Evan/Documents/REPO/m2/lib/LibFT/ft_split.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "ft_lst_utils.o",
+      "ft_lst_utils.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2/lib/LibLst",
+    "file": "/home/Evan/Documents/REPO/m2/lib/LibLst/ft_lst_utils.c",
+    "output": "/home/Evan/Documents/REPO/m2/lib/LibLst/ft_lst_utils.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "ft_lst_modifications.o",
+      "ft_lst_modifications.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2/lib/LibLst",
+    "file": "/home/Evan/Documents/REPO/m2/lib/LibLst/ft_lst_modifications.c",
+    "output": "/home/Evan/Documents/REPO/m2/lib/LibLst/ft_lst_modifications.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "ft_lst_extra.o",
+      "ft_lst_extra.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2/lib/LibLst",
+    "file": "/home/Evan/Documents/REPO/m2/lib/LibLst/ft_lst_extra.c",
+    "output": "/home/Evan/Documents/REPO/m2/lib/LibLst/ft_lst_extra.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "printf.o",
+      "printf.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2/lib/LibPrintf",
+    "file": "/home/Evan/Documents/REPO/m2/lib/LibPrintf/printf.c",
+    "output": "/home/Evan/Documents/REPO/m2/lib/LibPrintf/printf.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "ft_toa.o",
+      "ft_toa.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2/lib/LibPrintf",
+    "file": "/home/Evan/Documents/REPO/m2/lib/LibPrintf/ft_toa.c",
+    "output": "/home/Evan/Documents/REPO/m2/lib/LibPrintf/ft_toa.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "handle_int.o",
+      "handle_int.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2/lib/LibPrintf",
+    "file": "/home/Evan/Documents/REPO/m2/lib/LibPrintf/handle_int.c",
+    "output": "/home/Evan/Documents/REPO/m2/lib/LibPrintf/handle_int.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "handle_char.o",
+      "handle_char.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2/lib/LibPrintf",
+    "file": "/home/Evan/Documents/REPO/m2/lib/LibPrintf/handle_char.c",
+    "output": "/home/Evan/Documents/REPO/m2/lib/LibPrintf/handle_char.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "apply_flags.o",
+      "apply_flags.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2/lib/LibPrintf",
+    "file": "/home/Evan/Documents/REPO/m2/lib/LibPrintf/apply_flags.c",
+    "output": "/home/Evan/Documents/REPO/m2/lib/LibPrintf/apply_flags.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "parse_format.o",
+      "parse_format.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2/lib/LibPrintf",
+    "file": "/home/Evan/Documents/REPO/m2/lib/LibPrintf/parse_format.c",
+    "output": "/home/Evan/Documents/REPO/m2/lib/LibPrintf/parse_format.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "handle_flag.o",
+      "handle_flag.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2/lib/LibPrintf",
+    "file": "/home/Evan/Documents/REPO/m2/lib/LibPrintf/handle_flag.c",
+    "output": "/home/Evan/Documents/REPO/m2/lib/LibPrintf/handle_flag.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "utils.o",
+      "utils.c"
+    ],
+    "directory": "/home/Evan/Documents/REPO/m2/lib/LibPrintf",
+    "file": "/home/Evan/Documents/REPO/m2/lib/LibPrintf/utils.c",
+    "output": "/home/Evan/Documents/REPO/m2/lib/LibPrintf/utils.o"
+  }
+]
