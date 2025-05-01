@@ -6,7 +6,7 @@
 /*   By: Evan <Evan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 03:03:48 by Evan              #+#    #+#             */
-/*   Updated: 2025/04/30 03:34:55 by Evan             ###   ########.fr       */
+/*   Updated: 2025/05/01 12:16:18 by Evan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,13 +59,25 @@ void	apply_redirections(t_redir *redirs)
 	while (redirs)
 	{
 		if (redirs->type == T_REDIR_IN)
-			redir_input(redirs->target);
+		{
+			if (redirs->heredoc_fd >= 0)
+			{
+				dup2(redirs->heredoc_fd, STDIN_FILENO);
+				close(redirs->heredoc_fd);
+			}
+			else
+			{
+				redir_input(redirs->target);
+			}
+		}
 		else if (redirs->type == T_REDIR_OUT)
+		{
 			redir_output(redirs->target);
+		}
 		else if (redirs->type == T_APPEND)
+		{
 			redir_append(redirs->target);
-		else if (redirs->type == T_HEREDOC)
-			redir_heredoc(redirs->target);
+		}
 		redirs = redirs->next;
 	}
 }

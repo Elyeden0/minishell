@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ast_buidlers.c                                     :+:      :+:    :+:   */
+/*   ast_builders.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abonnard <abonnard@student.42nice.fr>      +#+  +:+       +#+        */
+/*   By: Evan <Evan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 14:08:20 by Evan              #+#    #+#             */
-/*   Updated: 2025/04/30 10:34:39 by abonnard         ###   ########.fr       */
+/*   Updated: 2025/05/01 11:46:08 by Evan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ t_redir	*redir_new(t_token_type type, const char *target)
 		return (NULL);
 	r->type = type;
 	r->target = ft_strdup(target);
+	r->heredoc_fd = -1;
 	r->next = NULL;
 	return (r);
 }

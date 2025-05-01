@@ -6,7 +6,7 @@
 /*   By: Evan <Evan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 20:11:11 by Evan              #+#    #+#             */
-/*   Updated: 2025/04/30 15:39:23 by Evan             ###   ########.fr       */
+/*   Updated: 2025/05/01 11:56:20 by Evan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,9 +88,9 @@ void	minishell(t_env *env)
 		if (!lexer)
 			continue ;
 		tokenize(lexer);
-		expand_tokens(lexer->head, env, last_status);
-		expand_star_tokens(&lexer->head);
+		expand_tokens(&lexer->head, env, last_status);
 		root = parse_ast(lexer);
+		collect_heredocs(root);
 		last_status = exec_ast(root, &env, last_status);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: Evan <Evan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 03:03:13 by Evan              #+#    #+#             */
-/*   Updated: 2025/04/30 03:27:24 by Evan             ###   ########.fr       */
+/*   Updated: 2025/05/01 12:20:46 by Evan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,6 +119,8 @@ int	exec_cmd(t_ast *cmd, t_env **env, int last_status)
 	if (pid == 0)
 	{
 		apply_redirections(cmd->redirs);
+		if (!cmd->argv[0])
+			handle_empty_command();
 		if (is_builtin(cmd->argv[0]))
 			exit(run_builtin(cmd->argv, env, last_status));
 		path = search_path(cmd->argv[0], *env);

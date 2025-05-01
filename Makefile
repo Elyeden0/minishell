@@ -50,7 +50,7 @@ SRCS 	 =	$(SRC_DIR)/main.c \
 			$(addprefix $(BUILTINS_PATH)/, b_cd.c b_cd2.c b_echo.c b_env.c b_exit.c b_export.c b_export_utils.c b_pwd.c) \
 			$(addprefix $(LEXER_PATH)/, lexer.c lexer_utils.c lexer_handler.c lexer_handler_utils.c) \
 			$(addprefix $(PARSER_PATH)/, input_check_paren.c input_error_parser.c input_error_tokenizer.c input_error_utils.c input_error.c) \
-			$(addprefix $(EXECUTION_PATH)/, exec_builtin.c exec_cmds.c exec_heredoc.c exec_pipe.c exec_redirect.c exec.c) \
+			$(addprefix $(EXECUTION_PATH)/, exec_builtin.c exec_cmds.c exec_heredoc.c exec_pipe.c exec_redirect.c exec.c exec_empty.c) \
 			$(addprefix $(READLINE_PATH)/, rd_edit.c rd_history.c rd_history_2.c rd_readline.c rd_reset.c rd_signal.c rd_term.c rd_len_prompt.c) \
 			$(addprefix $(AST_PATH)/, ast_builders.c ast_parser_utils.c ast_parser.c)
 # BONUS_SRCS = $(BONUS_DIR)/

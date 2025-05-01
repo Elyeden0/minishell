@@ -6,59 +6,71 @@
 /*   By: Evan <Evan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 03:35:02 by Evan              #+#    #+#             */
-/*   Updated: 2025/04/30 03:51:51 by Evan             ###   ########.fr       */
+/*   Updated: 2025/05/01 12:15:55 by Evan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-static void	hd_sigint_handler(int sig)
-{
-	(void)sig;
-	g_signal = SIGINT;
-}
-
-static int	read_heredoc_lines(int fd, const char *delimiter)
+static void	read_heredoc_loop(int write_fd, const char *delimiter)
 {
 	char	*line;
-	int		count;
+	int		line_count;
 
-	count = 0;
+	line_count = 1;
 	while (1)
 	{
 		line = ft_readline("heredoc> ");
-		count++;
-		if (g_signal == SIGINT || !line)
+		if (!line)
 		{
-			printf("minishell: warning: here-document at line ");
-			printf("%d delimited by end-of-file (wanted `%s')\n", count,
-				delimiter);
+			printf("minishell: warning: here-document at line %d ", line_count);
+			printf("delimited by end-of-file (wanted `%s')\n", delimiter);
 			break ;
 		}
 		if (ft_strcmp(line, delimiter) == 0)
 			break ;
-		write(fd, line, ft_strlen(line));
-		write(fd, "\n", 1);
+		write(write_fd, line, ft_strlen(line));
+		write(write_fd, "\n", 1);
+		line_count++;
 	}
-	return (count);
 }
 
-void	redir_heredoc(const char *delimiter)
+static void	process_single_heredoc(t_redir *r)
 {
-	int					hd[2];
-	struct sigaction	hd_sa;
-	struct sigaction	old_sa;
+	int	hd[2];
 
-	if (pipe(hd) == -1)
+	if (pipe(hd) < 0)
+	{
+		perror("pipe");
 		exit(1);
-	ft_memset(&hd_sa, 0, sizeof(hd_sa));
-	hd_sa.sa_handler = hd_sigint_handler;
-	sigemptyset(&hd_sa.sa_mask);
-	sigaction(SIGINT, &hd_sa, &old_sa);
-	read_heredoc_lines(hd[1], delimiter);
-	sigaction(SIGINT, &old_sa, NULL);
-	g_signal = 0;
+	}
+	read_heredoc_loop(hd[1], r->target);
 	close(hd[1]);
-	dup2(hd[0], STDIN_FILENO);
-	close(hd[0]);
+	r->target = NULL;
+	r->type = T_REDIR_IN;
+	r->heredoc_fd = hd[0];
+}
+
+static void	handle_cmd_heredocs(t_ast *node)
+{
+	t_redir	*r;
+
+	r = node->redirs;
+	while (r)
+	{
+		if (r->type == T_HEREDOC)
+			process_single_heredoc(r);
+		r = r->next;
+	}
+}
+
+void	collect_heredocs(t_ast *node)
+{
+	if (!node)
+		return ;
+	if (node->type == AST_CMD)
+		handle_cmd_heredocs(node);
+	collect_heredocs(node->left);
+	collect_heredocs(node->right);
+	collect_heredocs(node->child);
 }

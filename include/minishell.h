@@ -6,7 +6,7 @@
 /*   By: Evan <Evan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 16:56:35 by Evan              #+#    #+#             */
-/*   Updated: 2025/04/30 17:11:02 by Evan             ###   ########.fr       */
+/*   Updated: 2025/05/01 12:20:59 by Evan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -162,6 +162,7 @@ typedef struct s_redir
 {
 	t_token_type				type;
 	char						*target;
+	int							heredoc_fd;
 	struct s_redir				*next;
 }								t_redir;
 
@@ -263,7 +264,7 @@ int								is_op_char(char c);
 void							skip_whitespace(t_lexer *lx);
 
 // Expansion ($, $? et wildcard)
-void							expand_tokens(t_token *tok, t_env *env,
+void							expand_tokens(t_token **tok, t_env *env,
 									int last_status);
 void							expand_star_tokens(t_token **tokens);
 char							*append_str(const char *dest, const char *src);
@@ -352,6 +353,7 @@ int								exec_cmd(t_ast *cmd, t_env **env,
 void							apply_redirections(t_redir *redirs);
 int								exec_pipeline(t_ast *node, t_env **env,
 									int last_status);
-void							redir_heredoc(const char *delimiter);
+void							collect_heredocs(t_ast *node);
+void							handle_empty_command(void);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: Evan <Evan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 01:52:11 by Evan              #+#    #+#             */
-/*   Updated: 2025/04/28 01:54:49 by Evan             ###   ########.fr       */
+/*   Updated: 2025/05/01 12:22:26 by Evan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ static void	handle_dollar(t_expander *ex)
 		ex->i += 2;
 	}
 	else if ((ex->s[ex->i + 1] >= 'A' && ex->s[ex->i + 1] <= 'Z')
-		|| (ex->s[ex->i + 1] >= 'a' && ex->s[ex->i + 1] <= 'z') || ex->s[ex->i
-			+ 1] == '_')
+		|| (ex->s[ex->i + 1] >= 'a' && ex->s[ex->i + 1] <= 'z')
+		|| ex->s[ex->i + 1] == '_')
 	{
 		j = ex->i + 1;
 		while (ex->s[j] && (is_alpha(ex->s[j]) || (ex->s[j] >= '0'
@@ -87,12 +87,16 @@ static char	*expand_str(const char *s, t_env *env, int last_status)
 	return (ex.res);
 }
 
-void	expand_tokens(t_token *tok, t_env *env, int last_status)
+void	expand_tokens(t_token **tok, t_env *env, int last_status)
 {
-	while (tok)
+	t_token	*curr;
+
+	curr = *tok;
+	while (curr)
 	{
-		if (tok->type == T_WORD && tok->value)
-			tok->value = expand_str(tok->value, env, last_status);
-		tok = tok->next;
+		if (curr->type == T_WORD && curr->value)
+			curr->value = expand_str(curr->value, env, last_status);
+		curr = curr->next;
 	}
+	expand_star_tokens(tok);
 }
