@@ -6,7 +6,7 @@
 /*   By: Evan <Evan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 03:03:13 by Evan              #+#    #+#             */
-/*   Updated: 2025/05/01 12:20:46 by Evan             ###   ########.fr       */
+/*   Updated: 2025/05/01 23:46:09 by Evan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,15 +43,14 @@ char	**env_to_charpp(t_env *env)
 int	wait_child(pid_t pid)
 {
 	int	status;
+	int	sig;
 
 	while (1)
 	{
 		if (waitpid(pid, &status, 0) < 0)
 		{
 			if (errno == EINTR)
-			{
 				return (128 + SIGINT);
-			}
 			perror("waitpid");
 			return (1);
 		}
@@ -60,7 +59,11 @@ int	wait_child(pid_t pid)
 	if (WIFEXITED(status))
 		return (WEXITSTATUS(status));
 	if (WIFSIGNALED(status))
-		return (128 + WTERMSIG(status));
+	{
+		sig = WTERMSIG(status);
+		print_signal_error(sig);
+		return (128 + sig);
+	}
 	return (status);
 }
 

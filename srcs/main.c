@@ -6,10 +6,11 @@
 /*   By: Evan <Evan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 20:11:11 by Evan              #+#    #+#             */
-/*   Updated: 2025/05/01 11:56:20 by Evan             ###   ########.fr       */
+/*   Updated: 2025/05/01 15:53:45 by Evan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include "minishell.h"
 
 int	ft_isalpha(int c)
@@ -54,8 +55,8 @@ char	*ft_get_prompt(t_env *env)
 	char	*temp;
 
 	user = get_env_value(env, "USER");
-	if (!user)
-		user = ft_strdup("");
+	if (!user || ft_strlen(user) == 0)
+		user = ft_strdup("minishell");
 	pwd = get_env_value(env, "PWD");
 	if (!pwd)
 		pwd = ft_strdup("");
@@ -76,7 +77,7 @@ void	minishell(t_env *env)
 	last_status = 0;
 	while (1)
 	{
-		input = ft_readline(ft_get_prompt(env));
+		input = ft_readline(ft_get_prompt(env), env);
 		if (!input)
 		{
 			printf("exit\n");
@@ -90,7 +91,7 @@ void	minishell(t_env *env)
 		tokenize(lexer);
 		expand_tokens(&lexer->head, env, last_status);
 		root = parse_ast(lexer);
-		collect_heredocs(root);
+		collect_heredocs(root, env);
 		last_status = exec_ast(root, &env, last_status);
 	}
 }

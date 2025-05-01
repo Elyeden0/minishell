@@ -6,7 +6,7 @@
 /*   By: Evan <Evan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 16:56:35 by Evan              #+#    #+#             */
-/*   Updated: 2025/05/01 12:20:59 by Evan             ###   ########.fr       */
+/*   Updated: 2025/05/02 01:01:48 by Evan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
+# include <sys/ioctl.h>
+# include <sys/stat.h>
 # include <sys/types.h>
 # include <sys/wait.h>
 # include <termios.h>
@@ -36,6 +38,7 @@
 # define BOLD_BLUE "\001\033[1;34m\002"
 # define BOLD_YELLOW "\001\033[1;33m\002"
 # define RESET_COLOR "\001\033[0m\002"
+# define MAX_LINES 56
 
 // environnement
 typedef struct s_env
@@ -85,6 +88,49 @@ typedef struct s_state
 	t_hist						*tail;
 	t_hist						*curr;
 }								t_state;
+
+typedef enum e_completion_type
+{
+	CT_NONE,
+	CT_CMD,
+	CT_ARG
+}								t_completion_type;
+
+typedef struct s_completion_data
+{
+	t_completion_type			type;
+	int							start;
+	int							plen;
+	char						*prefix;
+	char						**suggestions;
+	int							count;
+	char						*insertion;
+	char						*last_slash;
+	int							to_delete;
+	int							j;
+}								t_completion_data;
+
+typedef struct s_sug_data
+{
+	char						**arr;
+	const char					*prompt;
+	const char					*buf;
+	int							count;
+	int							max_len;
+	int							width;
+	int							cols;
+	int							rows;
+	int							lines_printed;
+	char						c;
+}								t_sug_data;
+
+typedef struct s_cmd_suggestions
+{
+	char	**paths;
+	char	*path_dup;
+	t_list	*list;
+	DIR		*dir;
+}			t_cmd_suggestions;
 
 // ============================ LEXER / TOKENS ============================= //
 
@@ -188,6 +234,7 @@ char							*ft_strndup(const char *s, size_t n);
 char							*ft_strjoin(char const *s1, char const *s2);
 int								is_alpha(char c);
 int								ft_isalnum(int c);
+char							*ft_strrchr(const char *s, int c);
 
 // Signals
 void							ft_sigint_handler(int sig);
@@ -201,7 +248,7 @@ void							ft_restore_termios(const struct termios *orig);
 
 // Prompt et readline (édition de ligne)
 void							ft_print_prompt(const char *prompt);
-char							*ft_readline(const char *prompt);
+char							*ft_readline(const char *prompt, t_env *env);
 void							ft_handle_backspace(char *buf, size_t *pos);
 void							ft_insert_mid(char **buf, size_t *pos, char c);
 void							ft_insert_char(char **buf, size_t *pos,
@@ -217,6 +264,29 @@ char							*ft_sigint_reset(const struct termios *orig,
 									char **bp);
 char							*ft_eof_reset(const struct termios *orig,
 									char *buf);
+
+// Completion readline
+t_completion_type				get_completion_type(const char *buf,
+									size_t pos);
+char							**get_command_suggestions(const char *prefix,
+									t_env *env);
+void							print_suggestions(char **suggestions,
+									const char *prompt, const char *buf);
+int								count_items(char **arr);
+char							**get_file_suggestions(const char *prefix);
+void							handle_tab_completion(t_v *v, t_hv *hv,
+									t_env *env);
+int								get_terminal_width(void);
+int								count_items(char **arr);
+size_t							get_max_len(char **array);
+void							ft_putnbr_fd(int n, int fd);
+void							init_sug_data(t_sug_data *d, char **arr,
+									const char *prompt, const char *buf);
+void							ft_lstadd_unique_str(t_list **lst, char *s);
+char							**ft_list_to_array(t_list *lst);
+int								match_prefix(const char *s, const char *prefix);
+char							*ft_strrchr(const char *s, int c);
+int								is_dir(const char *path);
 
 // Syntax error (prélexer pour erreurs de syntaxe)
 int								syntax_error(const char *line);
@@ -353,7 +423,8 @@ int								exec_cmd(t_ast *cmd, t_env **env,
 void							apply_redirections(t_redir *redirs);
 int								exec_pipeline(t_ast *node, t_env **env,
 									int last_status);
-void							collect_heredocs(t_ast *node);
+void							collect_heredocs(t_ast *node, t_env *env);
 void							handle_empty_command(void);
+void							print_signal_error(int sig);
 
 #endif

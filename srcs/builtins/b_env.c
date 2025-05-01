@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   b_env.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abonnard <abonnard@student.42nice.fr>      +#+  +:+       +#+        */
+/*   By: Evan <Evan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 02:39:48 by Evan              #+#    #+#             */
-/*   Updated: 2025/04/30 13:53:36 by abonnard         ###   ########.fr       */
+/*   Updated: 2025/05/01 16:01:03 by Evan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ int	builtin_unset(t_env *env, char **args)
 		node = find_env(env, args[i]);
 		if (node)
 		{
+			node->data = ft_strjoin(args[i], "=");
 			node->show = 0;
 			node->params = "";
 		}

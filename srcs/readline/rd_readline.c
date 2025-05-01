@@ -6,15 +6,16 @@
 /*   By: Evan <Evan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 22:56:05 by Evan              #+#    #+#             */
-/*   Updated: 2025/04/30 02:54:12 by Evan             ###   ########.fr       */
+/*   Updated: 2025/05/02 00:19:26 by Evan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-static char	*ft_readline_loop(t_v *v, t_hv *hv, struct termios *orig)
+static char	*ft_readline_loop(t_v *v, t_hv *hv, struct termios *orig,
+		t_env *env)
 {
-	ssize_t	r;
+	ssize_t				r;
 
 	while (1)
 	{
@@ -34,12 +35,14 @@ static char	*ft_readline_loop(t_v *v, t_hv *hv, struct termios *orig)
 			;
 		else if ((unsigned char)v->c >= 32 && (unsigned char)v->c <= 126)
 			ft_insert_char(&v->buf, &v->pos, &v->cap, v->c);
+		else if (v->c == '\t')
+			handle_tab_completion(v, hv, env);
 	}
 	ft_restore_termios(orig);
 	return (v->buf);
 }
 
-char	*ft_readline(const char *prompt)
+char	*ft_readline(const char *prompt, t_env *env)
 {
 	static t_state	st;
 	t_v				v;
@@ -61,7 +64,7 @@ char	*ft_readline(const char *prompt)
 	hv.tail = &st.tail;
 	hv.curr = &st.curr;
 	hv.save = NULL;
-	res = ft_readline_loop(&v, &hv, &st.orig);
+	res = ft_readline_loop(&v, &hv, &st.orig, env);
 	if (res)
 		ft_add_history(res, &st.tail);
 	return (res);
