@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rd_print_suggestions.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Evan <Evan@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: abonnard <abonnard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 00:46:16 by Evan              #+#    #+#             */
-/*   Updated: 2025/05/02 00:47:45 by Evan             ###   ########.fr       */
+/*   Updated: 2025/05/02 09:32:14 by abonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static int	handle_more_prompt(t_sug_data *d)
 			return (1);
 		if (d->c == 'q')
 		{
-			write(1, "\n", 1);
+			write(1, "\r        \r", 10);
 			write(1, d->prompt, ft_strlen(d->prompt));
 			write(1, d->buf, ft_strlen(d->buf));
 			return (0);

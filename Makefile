@@ -2,7 +2,7 @@
 SHELL = /bin/bash
 
 # Compiler and flags
-CC       = clang
+CC       = cc
 CFLAGS   = -Wall -Wextra -Werror -fsanitize=address -g3
 
 

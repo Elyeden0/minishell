@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Evan <Evan@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: abonnard <abonnard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 16:56:35 by Evan              #+#    #+#             */
-/*   Updated: 2025/05/02 01:01:48 by Evan             ###   ########.fr       */
+/*   Updated: 2025/05/02 09:24:40 by abonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -322,7 +322,8 @@ int								process_redirection_char(t_lexer *lx, char c,
 									t_token_type single, t_token_type dbl);
 int								handle_and_or(t_lexer *lx);
 int								handle_single_char(t_lexer *lx);
-int								handle_redirection(t_lexer *lx);
+int								handle_redirection(t_lexer *lx
+);
 void							handle_word(t_lexer *lx);
 void							handle_quote(t_lexer *lx, char *buf, size_t *i,
 									char quote);

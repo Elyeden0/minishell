@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_env.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Evan <Evan@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: abonnard <abonnard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 19:50:51 by Evan              #+#    #+#             */
-/*   Updated: 2025/04/27 22:56:42 by Evan             ###   ########.fr       */
+/*   Updated: 2025/05/02 09:49:19 by abonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void	check_path_pwd_env(t_env *env)
 	}
 	if (!has_path)
 		last->next = create_custom_node("PATH=",
-				"/usr/local/sbin:/usr/local/bin:/usr/bin", 0);
+				"/usr/local/sbin:/usr/local/bin:/usr/bin", 1);
 }
 
 t_env	*create_node_env(char *envp)

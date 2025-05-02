@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rd_signal.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Evan <Evan@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: abonnard <abonnard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 22:55:42 by Evan              #+#    #+#             */
-/*   Updated: 2025/04/27 22:55:42 by Evan             ###   ########.fr       */
+/*   Updated: 2025/05/02 09:40:37 by abonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,5 @@ void	ft_setup_signal(void)
 	sigaction(SIGINT, &sa, NULL);
 	sa.sa_handler = ft_sigquit_handler;
 	sigaction(SIGQUIT, &sa, NULL);
+	sa.sa_flags = SA_RESTART;
 }
